@@ -1,0 +1,354 @@
+body
+    font-family: sans-serif
+    margin: 0
+    overflow-x: hidden
+    font-family: 'Open Sans', sans-serif
+    color: #111
+
+    h1,h2,h3,h4,h5
+        font-family: 'Montserrat', sans-serif
+    
+    main:has(.homepage-slider)
+        background-image: none !important
+    
+.container
+    max-width: 980px
+    padding: 0 1rem
+    margin-left: auto
+    margin-right: auto
+    
+ul
+    padding-left: 0
+    list-style: none
+
+a
+    text-decoration: none
+    color: inherit
+
+img
+    max-width: 100%
+    
+.bttn
+    display: inline-block
+    color: #fff
+    padding: 0.7rem 1rem
+    background-color: rgba(204,144,101,0.5)
+    border-radius: 0.222rem
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+    transition: all 0.2s ease-in-out
+    
+    &:hover
+        background-color: #555
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1)
+    
+.logo
+    display: flex
+    font-family: sans-serif
+    img
+        margin-right: 0.5rem
+        width: 100px
+        height: 100px
+    .line-one
+        font-size: 3rem
+        font-weight: bold
+        color: #7f7f7f
+        letter-spacing: 0.5rem
+    .line-two
+        font-size: 2rem
+        color: #555
+        letter-spacing: 0.3rem
+        
+    @media screen and (max-width: 600px)
+        img
+            width: 50px
+            height: 50px
+        .line-one
+            font-size: 1.5rem
+            letter-spacing: 0.3rem
+        .line-two
+            font-size: 1rem
+            letter-spacing: 0.1rem
+        
+header
+    background-color: #fff
+    margin-top: 2rem
+    
+    nav
+        margin-top: 1.5rem
+        > ul
+            list-style: none
+            padding: 0
+            margin: 0
+            display: flex
+            justify-content: flex-end
+            
+            @media screen and (max-width: 600px)
+                display: flex
+                justify-content: flex-start
+                flex-wrap: wrap
+            
+            > li:not(:last-child)
+                border-right: 1px solid #eee
+            
+                @media screen and (max-width: 600px)
+                    border-right: 1px solid transparent
+                
+            > li
+                display: inline-block
+                position: relative
+
+                &:before, &:after
+                    content: ''
+                    clear: both
+                
+                &:nth-child(2):hover
+                    ul
+                        display: block
+                        z-index: 10
+                
+                a
+                    display: block
+                    padding: 1rem 0.5rem
+                    color: #777
+                    font-size: 14px
+                    
+                    &:hover
+                        color: #eddb55
+                
+                > ul
+                    position: absolute
+                    padding: 0
+                    margin: 0
+                    top: 100%
+                    width: 100px
+                    background: #fff
+                    transition: all 0.2s ease-in-out
+                    display: none
+                    list-style: none !important
+                        
+                    > a
+                        display: block
+                        verticle-align: middle
+                        padding: 0.5rem
+                    
+.homepage-slider
+    
+    .owl-item
+        background-color: skyblue
+        background-position: center top
+        background-size: cover
+        position: relative
+
+        .overlay
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: rgba(204, 144, 101, 0.2)
+            z-index: -1
+        
+        .content
+            max-width: 80ch
+            margin-left: auto
+            margin-right: auto
+            padding: 1rem
+            color: #fff
+            padding-top: 10rem
+            padding-bottom: 8rem
+            min-height: 200px
+            text-align: center
+
+            h2
+                letter-spacing: 4px
+
+                @media screen and (min-width: 600px)
+                    font-size: 2rem
+            
+            p
+                margin-bottom: 2rem
+                line-height: 1.5
+            
+            .transparent-bttn
+                padding: 0.7rem 1rem
+                color: #fff
+                border: 1px solid #fff
+                
+                &:hover
+                    color: #fff
+                    background-color: #333
+                    border-color: #555
+                
+        @media all and (max-width: 600px)
+            .content
+                padding-top: 6rem
+                padding-bottom: 4rem
+                
+footer
+    .footer-contents
+        display: flex
+        padding-top: 2rem
+        
+        > *
+            flex: 1
+            min-width: 150px
+            margin-bottom: 1.5rem
+        
+        @media screen and (max-width: 600px)
+            flex-wrap: wrap
+        
+    .footer-credits 
+        text-align: center
+        
+.visit-us 
+    padding-top: 2rem
+    
+    .row 
+        display: flex
+        flex-direction: column-reverse
+        margin-bottom: 2rem
+        
+        @media screen and (min-width: 600px)
+            flex-direction: row
+            > .content
+                flex: 3
+                padding-right: 1rem
+                
+            > .image
+                flex: 1
+
+figure
+    margin: 0
+    
+.our-kids
+    margin-top: 2rem
+    margin-bottom: 2rem
+    overflow-x: hidden
+
+    .kids-belt
+        padding-top: 6rem
+        padding-bottom: 6rem
+        background-color: #eee
+        width: 200%
+        position: relative
+        left: 0%
+        transition: all 800ms ease-in-out
+
+    .header
+        padding: 3rem 1rem
+        
+        p
+            line-height: 1.4
+
+    .kids--wrapper
+        float: left
+        width: 50%
+
+    .profile--wrapper
+        float: left
+        width: 50%
+        display: none
+
+        .return
+            width: 40px
+            height: 40px
+            cursor: pointer
+            opacity: 0.5
+
+            path
+                fill: rgba(0,0,0,0.4)
+
+            &:hover
+                opacity: 1
+
+        .profile 
+            margin-top: 2rem
+            display: flex
+            flex-wrap: nowrap
+            display: none
+
+            @media screen and (max-width: 600px)
+                flex-direction: column
+                text-align: center
+
+
+            .left
+                
+                @media screen and (min-width: 600px)
+                    margin-top: 1rem
+                    flex: 4
+                    padding-right: 1rem
+                
+                .profile--avatar
+                    height: 350px
+                    width: 350px
+
+                    img    
+                        width: 350px
+                        height: 350px
+                        object-fit: cover
+                        border-radius: 50%
+
+                        @media screen and (max-width: 600px)
+                            text-align: center
+            
+            .right
+                line-height: 1.6
+
+                h2
+                    font-family: 'Open Sans', sans-serif
+                    text-transform: uppercase
+                    letter-spacing: 4px
+                    color: rgba(204, 144, 104, 0.9)
+
+                @media screen and (min-width: 600px)
+                    flex: 6
+                    padding-left: 2rem
+
+        
+    .kids
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-start
+        
+        .kid
+            position: relative
+            flex: 1
+            min-width: 320px
+            height: 280px
+            background-size: cover
+            background-position: center
+            overflow: hidden
+
+            &:hover
+                .kid-unit--overlay
+                    transform: none
+                    transition: transform 160ms ease-in-out
+
+                    p
+                        opacity: 1
+                        transition: opacity 90ms 120ms ease
+
+            .kid-unit--overlay
+                position: absolute
+                top: 0
+                left: 0
+                bottom: 0
+                right: 0
+                background-color: rgba(204,144,101,0.7)
+                display: flex
+                justify-content: center
+                align-items: center
+                transform: translateY(100%)
+
+                p
+                    display: inline-block
+                    font-style: italic
+                    color: #fff
+                    opacity: 0
+
+                    @media screen and (min-width: 600px)
+                        font-size: 2rem
+
+            
+        

@@ -1,0 +1,60 @@
+---
+layout: page
+title: Home
+order: 1
+slide_one_title: WELCOME
+slide_one_desc: Thank You for your interest in learning more about Karuna Children's Home. Browse our site to learn more about our work and support one of our children. 
+slide_one_cta: javascript:void(0)
+slide_two_title: MEET OUR KIDS
+slide_two_desc: Take some time to learn more about our kids and their stories. Plan a trip to come and visit them. 
+slide_two_cta: javascript:void(0)
+slide_three_title: SUPPORT
+slide_three_desc: By choosing to support one of our kids, you become a part of their lives. Stay connected with them and receive monthly updates from your sponsored child. Follow their journey through life. 
+slide_three_cta: javascript:void(0)
+---
+
+<section class="homepage-slider">
+    <div class="">
+        <div class="owl-carousel owl-theme owl-loaded">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item" style="background-image: url({{ site.url | prepend: site.baseurl }}/assets/images/slides/slide--one.jpg)">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="content">
+                                    <h2>{{ page.slide_one_title }}</h2>
+                                    <p>{{ page.slide_one_desc }}</p>
+                                    <a href="{{ page.slide_one_cta }}" class="transparent-bttn">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="background-image: url({{ site.url | prepend: site.baseurl }}/assets/images/slides/slide--two.jpg)">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="content">
+                                    <h2>{{ page.slide_two_title }}</h2>
+                                    <p>{{ page.slide_two_desc }}</p>
+                                    <a href="{{ page.slide_two_cta }}" class="transparent-bttn">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="owl-item" style="background-image: url({{ site.url | prepend: site.baseurl }}/assets/images/slides/slide--three.jpg)">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="content">
+                                    <h2>{{ page.slide_three_title }}</h2>
+                                    <p>{{ page.slide_three_desc }}</p>
+                                    <a href="{{ page.slide_three_cta }}" class="transparent-bttn">LEARN MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-dots">
+                    <div class="owl-dot active"><span></span></div>
+                    <div class="owl-dot"><span></span></div>
+                    <div class="owl-dot"><span></span></div>
+                </div>
+            </div>
+    </div>
+</section>
